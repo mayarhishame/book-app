@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <img
+        [src]="books?.imgUrl"
+        class="img-fluid rounded shadow"
+        alt="{{ books?.title }}"
+      />
+    </div>
+    <div class="col-md-8">
+      <h1 class="mb-3">{{ books?.title }}</h1>
+      <h4 class="text-muted mb-4">by {{ books?.author }}</h4>
+
+      <div class="card bg-light p-4">
+        <h3>Description</h3>
+        <p class="lead">{{ books?.description }}</p>
+      </div>
+
+      <button class="btn btn-outline-primary mt-4" (click)="goBack()">
+        ← Back to Books
+      </button>
+    </div>
+  </div>
+</div>
