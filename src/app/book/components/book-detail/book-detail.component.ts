@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Book } from '../../models/book';
-import { BookService } from '../../services/book.service';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Book } from '../../../models/book';
 
 @Component({
   selector: 'app-book-detail',
@@ -9,19 +7,11 @@ import { BookService } from '../../services/book.service';
   templateUrl: './book-detail.component.html',
   styleUrl: './book-detail.component.css',
 })
-export class BookDetailComponent implements OnInit {
-  currentId: number = 0;
-  books: Book | null = null;
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private router: Router,
-    private bookService: BookService
-  ) {}
-  ngOnInit(): void {
-    this.currentId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    this.books = this.bookService.getBookById(this.currentId);
-  }
+export class BookDetailComponent {
+  @Input() book: Book | null = null;
+  @Output() backClicked = new EventEmitter<void>();
+
   goBack() {
-    this.router.navigate(['']);
+    this.backClicked.emit();
   }
 }

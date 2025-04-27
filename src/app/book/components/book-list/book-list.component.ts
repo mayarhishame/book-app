@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { BookService } from '../../services/book.service';
-import { Book } from '../../models/book';
-import { Router } from '@angular/router';
+import { Book } from '../../../models/book';
 
 @Component({
   selector: 'app-book-list',
@@ -11,10 +10,17 @@ import { Router } from '@angular/router';
 })
 export class BookListComponent {
   books: Book[] = [];
-  constructor(private bookService: BookService, private router: Router) {
+  selectedBook: Book | null = null;
+
+  constructor(private bookService: BookService) {
     this.books = this.bookService.getBooks();
   }
-  navigateToDetails(id: number) {
-    this.router.navigate(['/Details', id]);
+
+  showDetails(book: Book) {
+    this.selectedBook = book;
+  }
+
+  clearSelection() {
+    this.selectedBook = null;
   }
 }
