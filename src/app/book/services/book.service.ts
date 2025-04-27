@@ -39,12 +39,12 @@ export class BookService {
         'In this second book, Harry returns to Hogwarts for his second year, only to find strange things happening. Students are being petrified, and messages on the walls warn of the Chamber of Secrets being opened. Harry must uncover the truth behind these mysterious attacks with the help of his friends Ron and Hermione.',
     },
     {
-      id: 5,
-      title: 'Stranger Things Fanart Poster',
+      id: 10,
+      title: 'The Book Thief',
       imgUrl: '../../../assets/imgs/img5.jpg',
-      author: 'The SonnyFive',
+      author: 'Markus Zusak',
       description:
-        'A Netflix original series fanart poster featuring the popular show Stranger Things. The poster captures the 80s nostalgia and supernatural elements of the show, with its iconic characters and upside-down world that has captivated audiences worldwide.',
+        'A critically acclaimed historical novel set in Nazi Germany, narrated by Death. The story follows Liesel Meminger, a young girl who finds solace by stealing books and sharing them with others during World War II. This extraordinary New York Times #1 bestseller and Michael L. Printz Honor Book explores the power of words, resilience, and humanity in the face of brutality.',
     },
     {
       id: 6,
@@ -77,6 +77,22 @@ export class BookService {
       author: 'Jeff Carson and David Wolf',
       description:
         "A collaborative novel by authors Jeff Carson and David Wolf, featuring their signature blend of mystery and suspense. The story likely follows complex characters through intricate plots filled with unexpected twists and turns, showcasing the authors' talent for crafting compelling narratives.",
+    },
+    {
+      id: 10,
+      title: 'Chats Orcrepe: Magie, gaffes et compagnie',
+      imgUrl: '../../../assets/imgs/img10.jpg',
+      author: 'Catherine Kalengula & Faltazius',
+      description:
+        'A French-language book that appears to be a whimsical collection of magical tales and humorous anecdotes ("Magie, gaffes et compagnie"). The title suggests a playful exploration of magic and everyday blunders, likely featuring charming illustrations and lighthearted storytelling. Published by Mousrik, this work seems to blend fantasy elements with comedy.',
+    },
+    {
+      id: 11,
+      title: 'Enceladus',
+      imgUrl: '../../../assets/imgs/img11.jpg',
+      author: 'Brandon Q. Morris',
+      description:
+        "A hard science fiction novel set on Saturn's moon Enceladus, known for its subsurface ocean. The story likely follows a team of astronauts or scientists as they explore this icy world and encounter extraordinary phenomena. Brandon Q. Morris is known for his scientifically accurate space adventures that push the boundaries of human exploration while maintaining rigorous attention to astrophysical details.",
     },
   ];
   constructor() {}
